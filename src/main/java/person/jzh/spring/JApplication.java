@@ -9,7 +9,7 @@ import person.jzh.spring.formework.context.JApplicationContext;
  * @date 2019/12/4 12:26
  * @description：
  */
-public class TestDemo {
+public class JApplication {
 
     public static void main(String[] args) throws Exception {
         JApplicationContext context = new JApplicationContext("classpath:application.properties");

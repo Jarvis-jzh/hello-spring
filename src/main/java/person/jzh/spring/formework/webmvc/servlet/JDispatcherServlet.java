@@ -43,15 +43,6 @@ public class JDispatcherServlet extends HttpServlet {
     private List<JViewResolver> viewResolvers = new ArrayList<JViewResolver>();
 
     @Override
-    public void init(ServletConfig config) throws ServletException {
-        // 1、初始化ApplicationContext
-        context = new JApplicationContext(config.getInitParameter(CONTEXT_CONFIG_LOCATION));
-        System.out.println("JApplicationContext 初始完成 context");
-        // 2、初始化Spring MVC 九大组件
-        initStrategies(context);
-    }
-
-    @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         this.doPost(req, resp);
     }
@@ -142,6 +133,15 @@ public class JDispatcherServlet extends HttpServlet {
             }
         }
         return null;
+    }
+
+    @Override
+    public void init(ServletConfig config) throws ServletException {
+        // 1、初始化ApplicationContext
+        context = new JApplicationContext(config.getInitParameter(CONTEXT_CONFIG_LOCATION));
+        System.out.println("JApplicationContext 初始完成 context");
+        // 2、初始化Spring MVC 九大组件
+        initStrategies(context);
     }
 
     /**

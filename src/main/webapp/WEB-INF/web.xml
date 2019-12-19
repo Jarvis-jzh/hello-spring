@@ -10,7 +10,7 @@
 
 	<servlet>
 		<servlet-name>jmvc</servlet-name>
-		<servlet-class>person.jzh.spring.formework.webmvc.servlet.v2.JDispatcherServlet</servlet-class>
+		<servlet-class>person.jzh.spring.formework.webmvc.servlet.JDispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
 			<param-value>classpath:application.properties</param-value>
